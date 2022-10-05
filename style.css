@@ -1,0 +1,159 @@
+
+.header{
+    background: rgb(27, 31, 46);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.header_area{
+    padding: 20px;
+}
+.logo{
+    width:50px;
+    background-color:bisque;
+}
+
+.menu_area{
+    margin-top: 30px;
+}
+
+.menu_area nav a{
+    background-color:rgb(34,37,38);
+    color:rgb(255, 255, 255);
+    margin-bottom: 0px;
+}
+
+.menu_area nav a:hover{
+    background-color: rgb(31,35,50);
+}
+
+.active{
+    background-color: rgb(24,27,38) !important;
+    color:beige;
+   
+}
+.main{
+    background-color: rgb(31,35,50);
+    color: rgb(228, 133, 81); 
+}
+.main.area{
+    margin-bottom: 20px;
+}
+.main .card{
+    margin-bottom: 20px;
+}
+
+.lancamentos{
+    text-align: center;
+}
+.tags span{
+    background-color: #ffd700;
+    padding: 5px 16px;
+    border-radius: 20px;
+    white-space: nowrap;
+
+}
+.carousel_movie{
+    min-height: 440 px;
+    display: flex;
+}
+.trailer{
+    height: calc(100vw * (9/16));
+    max-height: 400px;
+    width: 50%;
+    padding: 0 12px;
+
+}
+.info_filme{
+    width:  50%;
+    padding: 0 12px;
+}
+
+.main.sobre{
+    text-align: justify;
+}
+.avaliador{
+    width:40px;
+    display: flex;
+    flex-direction: column;
+}
+.destaque{
+    margin-top: 10px;
+    max-height: 500px;
+    width:100%;
+}
+.makingof{
+    max-height: 300px;
+    width:100%;
+}
+.makingof > .descricao:first-of-type{
+    font-size: 18px;
+    margin-top: 20px;
+}
+.makingof > .descricao:not(:first-of-type){
+    font-size:14px;
+    margin-bottom: 0;
+}
+.card-makingof{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(41, 45, 62);
+    color:rgb(205,179,104);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.novidade{
+    display: flex;
+    padding-bottom: 20px;
+    color: beige;
+}
+.novidade > img{
+    
+    width: 200px;
+    flex: 1;
+    object-fit: cover;
+
+}
+.infos-novidade{
+    margin-left: 16px;
+    flex: 2;
+    padding-right:16px;
+    text-align: justify;
+    border-top: middle;
+    
+}
+.tags span{
+    background-color: #d3c71b;
+    padding: 5px 16px;
+    border-radius: 20px;
+    white-space: nowrap;
+    color:beige;
+
+}
+
+.container-avaliacao{
+    color: beige;
+}
+.user{
+    width: 10px;
+    display: inline-block;
+}
+.logo-redes-sociais{
+    width:30px;
+    display: inline-block;
+}
+.botton-caregar-mais{
+   margin-top: 20px;
+   background-color: beige;
+   color: black;
+}
+.footer{
+    background: #000000;
+    margin-top: 10px;
+    color: #ffd700;
+}
+.footer_area{
+    padding: 10px;
+    text-align: center;
+}

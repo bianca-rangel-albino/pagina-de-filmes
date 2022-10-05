@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal de Filmes</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header class="container header">
+    <div class="row">
+      <div class="col-12 header_area">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <div class="logo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M488 64h-8v20c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V64H96v20c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12V64h-8C10.7 64 0 74.7 0 88v336c0 13.3 10.7 24 24 24h8v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h320v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h8c13.3 0 24-10.7 24-24V88c0-13.3-10.7-24-24-24zM96 372c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm272 208c0 6.6-5.4 12-12 12H156c-6.6 0-12-5.4-12-12v-96c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v96zm0-168c0 6.6-5.4 12-12 12H156c-6.6 0-12-5.4-12-12v-96c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v96zm112 152c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40z"/>
+                  </svg>
+                </div>
+                
+                <h1>
+                  <a class="navbar-brand" href="#">MoviesFlix</a>
+                </h1>
+                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Lançamentos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Em destaque</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Entrevistas e makingof</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Novidades</a>
+                  </li>
+                  
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </header>
+  <main class="container main">
+    <!--Lançamentos carrossel-->
+    <div class="row">
+      <div class="col-12">
+
+        <div class="row main_area">
+          <div class="lancamentos">
+            <h1>Lançamentos</h1>
+          </div>
+
+          <div class="col-12">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel_movie">
+                    <iframe class="trailer" width="560" height="315" src="https://www.youtube.com/embed/5SjYFF2g35c"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                    <div class="info_filme">
+                      <h2>Animais Fantástico: Os Segredos de Dumbledore</h2>
+                      <p>O professor Alvo Dumbledore (Jude Law) sabe que o poderoso mago das trevas Gellert Grindelwald
+                        (Mads Mikkelsen) está se movimentando para assumir o controle do mundo mágico. Incapaz de
+                        detê-lo sozinho, ele pede ao magizoologista Newt Scamander (Eddie Redmayne) para liderar uma
+                        intrépida equipe de bruxos, bruxas e um corajoso padeiro trouxa em uma missão perigosa... 
+                      </p>
+                      <p>
+                        <strong>Diretor:  </strong>
+                        <span>David Yates</span>
+                        <strong> | Roteiro:  </strong>
+                        <span>J. K. Rowling, Steve Kloves</span>
+                        <strong> | Estreia: </strong>
+                        <span>2022</span>
+                      </p>
+                      <p>
+                        <strong>Avaliação</strong>
+                        <p>★★★★☆</p>
+                      </p>
+
+                     
+                      
+                    </div>
+                    
+                        
+                    </p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="carousel_movie">
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ykNjdamiXis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                    
+                    <div class="info_filme">
+                      <h1>Projeto Addam</h1>
+                      <strong>Sinopse:</strong>
+
+                      <p>Um viajante do tempo volta ao ano de 2022 por acidente e acaba se encontrando com seu eu mais
+                        novo. Juntos, e sendo caçados por forças do futuro, os dois embarcam em uma missão para
+                        consertar a linha temporal e salvar seus entes queridos.
+                      </p>
+
+                      <p>
+                        <strong>Diretor: </strong>
+                       <span>Shawn Levy</span>
+                       <strong> | Roteiro:  </strong>
+                       <span>Jonathan Tropper, Jennifer Flackett, T.S. Nowlin, Mark Levin</span>
+                       <strong> | Estreia: </strong>
+                       <span>2022</span>
+                      </p>
+                      
+                      <p>
+                        <strong>Avaliação</strong>
+                        <p>★★★★☆</p>
+                      </p>
+
+                    </div>
+                  </div>
+                  
+
+                </div>
+
+                <div class="carousel-item">
+                  <div class="carousel_movie">
+                    <iframe class="trailer" width="560" height="315" src="https://www.youtube.com/embed/_YjBUWE9xUM"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                    <div class="info_filme">
+                      <h1>Lightyear</h1>
+
+                      <strong>Sinopse:</strong>
+                      <p>A aventura de ação e ficção científica apresenta a história de origem definitiva de Buzz
+                        Lightyear — o herói que inspirou o brinquedo — apresentando o lendário Space Ranger que
+                        conquistaria gerações de fãs</p>
+                      <p>
+                        <strong>Diretor:  </strong>
+                        <span>Angus MacLane</span>
+                        <strong> | Roteiro:  </strong>
+                        <span>Pete Docter</span>
+                        <strong> | Estreia: </strong>
+                        <span>2022</span>
+
+                      </p>
+                        
+                        <p>
+                          <strong>Avaliação:</strong>
+                         <p>★★★★☆</p>
+                        </p>
+                        
+                            
+                      
+                     
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="carousel_movie">
+                    <iframe class="trailer" width="560" height="315" src="https://www.youtube.com/embed/eXsAkkPGHho"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                    <div class="info_filme">
+                      <h1>Batman</h1>
+                      <strong>Sinopse:</strong>
+                      <p>Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais
+                        sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como
+                        a personificação da vingança para a população.
+                      </p>
+                      <p>
+                        <strong>Diretor:  </strong>
+                        <span>Matt Reeves </span>
+                        <strong> | Roteiro:  </strong>
+                        <span>Matt Reeves, Peter Craig</span>
+                        <strong> | Estreia: </strong>
+                        <span>2022</span>
+
+                      </p>
+                        
+                        <p>
+                          <strong>Avaliação:</strong>
+                          <p>★★★★★</p>
+                        </p>
+                            
+                        
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!--em destaque-->
+      <div class="row">
+        <div class="col-10">
+          <h1>Em Destaque</h1>
+        </div>
+        <div class="col-2">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorias
+            </button>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">Fantasia</a>
+              <a href="#" class="dropdown-item">Romance</a>
+              <a href="#" class="dropdown-item">Comédia</a>
+              <a href="#" class="dropdown-item">Ação</a>
+            </div>
+
+          </div>
+          
+        </div>
+      
+      </div>
+      <img class="col-3  col-md-4 col-lg-3" src="imagens/destaque1.jpg" class="card-img-top" alt="Filme1">
+      <img class="col-3  col-md-4 col-lg-3" src="imagens/destaque2.jpg" class="card-img-top" alt="filme2">
+      <img class="col-3  col-md-4 col-lg-3" src="imagens/destaque3.jpg" class="card-img-top" alt="filme3">
+      <img class="col-3  col-md-4 col-lg-3" src="imagens/destaque4.jpg" class="card-img-top" alt="filme4">
+      
+      <div class="botton-carregar-mais" style="text-align: right; margin-top: 10px;">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-secondary btn-sm" type="button">+ Carregar mais filmes </button>
+        </div>
+      </div>
+      
+        
+      </div>
+    
+    </div>
+    </div>
+
+
+
+    </div>
+
+
+    <!--Ultimas avaliações-->
+    <div class="row">
+      <h1>Ultimas Avaliações</h1>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="container-avaliacao">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="avaliador">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                               <path d="M248 104c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm0-240C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-49.7 0-95.1-18.3-130.1-48.4 14.9-23 40.4-38.6 69.6-39.5 20.8 6.4 40.6 9.6 60.5 9.6s39.7-3.1 60.5-9.6c29.2 1 54.7 16.5 69.6 39.5-35 30.1-80.4 48.4-130.1 48.4zm162.7-84.1c-24.4-31.4-62.1-51.9-105.1-51.9-10.2 0-26 9.6-57.6 9.6-31.5 0-47.4-9.6-57.6-9.6-42.9 0-80.6 20.5-105.1 51.9C61.9 339.2 48 299.2 48 256c0-110.3 89.7-200 200-200s200 89.7 200 200c0 43.2-13.9 83.2-37.3 115.9z"/>
+                              </svg>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <h6>Ana Rezende</h6>
+                            <p><b>Avaliação:</b> Animais Fantásticos: Os Segredos de Dumbledore é uma aventura adorável e conta com um ótimo design de produção, além de bons efeitos visuais. Os segredos do título não são tão reveladores e soam mais como verdades omitidas. </p>
+                            <p>★★★☆☆ - 11/04/2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="container-avaliacao">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="avaliador">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                               <path d="M248 104c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm0-240C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-49.7 0-95.1-18.3-130.1-48.4 14.9-23 40.4-38.6 69.6-39.5 20.8 6.4 40.6 9.6 60.5 9.6s39.7-3.1 60.5-9.6c29.2 1 54.7 16.5 69.6 39.5-35 30.1-80.4 48.4-130.1 48.4zm162.7-84.1c-24.4-31.4-62.1-51.9-105.1-51.9-10.2 0-26 9.6-57.6 9.6-31.5 0-47.4-9.6-57.6-9.6-42.9 0-80.6 20.5-105.1 51.9C61.9 339.2 48 299.2 48 256c0-110.3 89.7-200 200-200s200 89.7 200 200c0 43.2-13.9 83.2-37.3 115.9z"/>
+                              </svg>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <h6>João Silva</h6>
+                            <p><b>Avaliação:</b> Filme incrível, que prendeu minha atenção do início ao fim, com certeza será campeão de premiação, pois muito se pode fazer analogia com os comportamentos humanos, mesmo sendo considerado um filme de heróis.</p>
+                            <p>★★★☆☆ - 01/04/2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="container-avaliacao">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="avaliador">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                               <path d="M248 104c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm0-240C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-49.7 0-95.1-18.3-130.1-48.4 14.9-23 40.4-38.6 69.6-39.5 20.8 6.4 40.6 9.6 60.5 9.6s39.7-3.1 60.5-9.6c29.2 1 54.7 16.5 69.6 39.5-35 30.1-80.4 48.4-130.1 48.4zm162.7-84.1c-24.4-31.4-62.1-51.9-105.1-51.9-10.2 0-26 9.6-57.6 9.6-31.5 0-47.4-9.6-57.6-9.6-42.9 0-80.6 20.5-105.1 51.9C61.9 339.2 48 299.2 48 256c0-110.3 89.7-200 200-200s200 89.7 200 200c0 43.2-13.9 83.2-37.3 115.9z"/>
+                              </svg>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <h6>Lucas Moreira</h6>
+                            <p><b>Avaliação:</b> Projeto Adam, é um filme cliche, mas que é divertido, e consegue ser bastante carismatico em sua proposta. A trama não é inovadora, e voce ja viu ela em vários outros filmes por aí. As atuações do filme são medianas e nada além disso.</p>
+                            <p>★★★☆☆ - 01/04/2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+      <div class="botton-carregar-mais" style="text-align: right; margin-top: 10px;">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-secondary btn-sm" type="button">+ Carregar mais avaliações </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Making of-->
+    <div class="row">
+      <h1>Making of & Entrevistas</h1>
+
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card-makingof">
+          <iframe class="makingof" width="560" height="315" src="https://www.youtube.com/embed/u2S24fWGGtg"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          <p class="descricao">
+            <strong> Filme:</strong>
+            Animais Fantástico:Os Segredos de Dumbledore
+          </p>
+          <span class="descricao">
+            <strong> Diretor:</strong>
+            David Yates
+          </span>
+          <span class="descricao">
+            <strong> Roteiro:</strong>
+            J. K. Rowling, Steve Kloves
+          </span>
+          <span class="descricao">
+            <strong> Estreia:</strong>
+            2022
+          </span>
+
+          <p>
+            <strong>Avaliação:</strong>
+           <p>★★★★☆</p>
+          </p>
+              
+          </p>
+          
+          
+          
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card-makingof">
+          <iframe class="makingof" width="560" height="315" src="https://www.youtube.com/embed/On8S4X_j5Io"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          <p class="descricao">
+            <strong> Filme:</strong>
+            Batman
+          </p>
+          <span>
+            
+          </span>
+          <span class="descricao">
+            <strong> Diretor:</strong>
+            Matt Reeves
+          </span>
+          <span class="descricao">
+            <strong> Roteiro:</strong>
+            Matt Reeves, Peter Craig
+          </span>
+          <span class="descricao">
+            <strong> Estreia:</strong>
+            2022
+          </span>
+          <p>
+            <strong>Avaliação:</strong>
+           <p>★★★★★</p>
+          </p>
+              
+          </p>
+
+        </div>
+      </div>
+
+
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card-makingof">
+          <iframe class="makingof" width="560" height="315" src="https://www.youtube.com/embed/btPD8aRxfcs"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          <p class="descricao">
+            <strong> Filme:</strong>
+            Projeto Adam
+          </p>
+          <span class="descricao">
+            <strong> Diretor:</strong>
+            Shawn Levy
+          </span>
+          <span class="descricao">
+            <strong> Roteiro:</strong>
+            Jonathan Tropper, Jennifer Flackett, T.S. Nowlin, Mark Levin
+          </span>
+          <span class="descricao">
+            <strong> Estreia:</strong>
+            2022
+          </span>
+
+          <p>
+            <strong>Avaliação:</strong>
+           <p>★★★★☆</p>
+          </p>
+              
+          </p>
+          
+        </div>
+      </div>
+
+      <div class="container" style="text-align: right; margin-top: 10px;">
+        <div class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-secondary btn-sm">+ Carregar mais filmes</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!--Sobre e novidades-->
+    <div class="row">
+
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+        <h1>Novidades</h1>
+        <div class="novidade">
+          <img src="imagens/novidade1.jpg" class="card-img-left" alt="...">
+          <div class="info-novidade">
+            <h4>Velozes e Furiosos 10 | Brie Larson é confirmada no elenco do filme</h4>
+
+            <p>Mais um nome de peso vai entrar na família de Velozes e Furiosos: a atriz Brie Larson (Capitã Marvel) foi
+              confirmada no elenco do próximo filme da série. O anúncio foi feito pelo próprio Vin Diesel, produtor e
+              principal nome da franquia, em seu Instagram.</p>
+            <div class="tags">
+              <span>Hollywood</span>
+              <span>Cinema</span>
+              <span>Fast&Furious</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="novidade">
+          <img src="imagens/novidade2.1.jpeg" class="card-img-left" alt="...">
+          <div class="info-novidade">
+            <h4>Doutor Estranho 2 | Nova prévia destaca Mordo e Feiticeira Escarlate</h4>
+
+            <p>Doutor Estranho no Multiverso da Loucura ganhou uma nova prévia nesta segunda-feira de abril (18) com algumas cenas inéditas. Os novos trechos revelados pelo teaser focam em Wanda (Elizabeth Olsen) e Mordo (Chiwetel Ejiofor), que se reencontram com Strange (Benedict Cumberbatch) em sua exploração do multiverso. </p>
+            <p>O filme chega aos cinemas brasileiros no dia 5 de maio de 2022.</p>
+            <div class="tags">
+              <span>Hollywood</span>
+              <span>Marvel</span>
+              <span>Cinema</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="novidade">
+          <img src="imagens/novidade3.jpg" class="card-img-left" alt="...">
+          <div class="info-novidade">
+            <h4>Avatar 2 | Brie Larson é confirmada no elenco do filme</h4>
+
+            <p>Previsto para estrear ainda em 2022, Avatar 2 promete ser uma sequência aclamada. Em entrevista ao Entertainment Weekly, Michelle Yeoh deu mais detalhes sobre o filme e elogiou o diretor James Cameron. </p>
+            <p>Na sequência do filme, Yeoh interpreta a Doutora Karina Mogue — e a atriz revelou ter ficado impressionada com o resultado das filmagens. “Então, sim, estou nas sequências de Avatar e, como você sabe, não podemos falar muito sobre isso. Mas é o James Cameron! Eu seria a “senhora do chá” para James Cameron!,” contou a atriz. </p>
+            <div class="tags">
+              <span>Hollywood</span>
+              <span>Novidades</span>
+              <span>Avatar</span>
+              <span>Cinema</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <h1>Sobre</h1>
+        <p>Este site foi criado em parceria com Bianca Rangel, que passou 4 longos dias, com grandes surtos para fazer.
+          Essa página Web trás algumas informaçôes sobre alguns filmes. Este trabalho foi desenvolvido para a matéria de
+          Interfaces WEB da Pontifica Universidade Católica de Minas Gerais</p>
+        <h2>Editorial</h2>
+        
+          <p> 
+           <strong>Redação:</strong>
+            Bianca Rangel
+          </p>
+        
+        
+        <p>
+          <strong>Pesquisa:</strong>
+          Bianca Rangel
+        </p>
+
+        <p>
+          <strong>Gerente Geral:</strong>
+          Bianca Rangel
+        </p>
+        <h2>Redes Sociais</h2>
+
+        <div class="logo-redes-sociais">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/>
+          </svg>
+        </div>
+        
+        <div class="logo-redes-sociais">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+          </svg>
+        </div>
+
+        <div class="logo-redes-sociais">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+          </svg>
+        </div>
+          
+        
+        
+        
+
+
+      </div>
+
+    </div>
+
+
+    </div>
+    </div>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+</body>
+<footer class="container footer">
+
+  <div class="row">
+
+    <div class="col-12 footer_area">
+      Copyright 2022 - Desenvolvimento de Interfaces Web - <strong>ICEI PUC Minas</strong>
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M488 64h-8v20c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V64H96v20c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12V64h-8C10.7 64 0 74.7 0 88v336c0 13.3 10.7 24 24 24h8v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h320v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h8c13.3 0 24-10.7 24-24V88c0-13.3-10.7-24-24-24zM96 372c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm272 208c0 6.6-5.4 12-12 12H156c-6.6 0-12-5.4-12-12v-96c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v96zm0-168c0 6.6-5.4 12-12 12H156c-6.6 0-12-5.4-12-12v-96c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v96zm112 152c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40z"/>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+  
+
+</footer>
+
+</html>
